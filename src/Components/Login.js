@@ -5,6 +5,7 @@ import { ThreeDots } from "react-loader-spinner";
 import Group8 from "../Assets/imagens/Group8.png";
 import styled from "styled-components";
 import ContextImage from './../Context/ContextImage';
+import ContextToken from './../Context/ContextToken';
 import { useContext } from 'react';
 
 
@@ -12,12 +13,15 @@ import { useContext } from 'react';
 export default function Login(){
 
     const {setImage} = useContext(ContextImage);
+    const {setToken} = useContext(ContextToken);
 
-    const [email, setEmail] = useState("");
-    const [senha, setSenha] = useState("");
+    const [email, setEmail] = useState("biabee-@hotmail.com");
+    const [senha, setSenha] = useState("123");
     const [isLoading, setIsLoading] = useState(false);
 
     const navigate = useNavigate();
+
+    
 
     function enter(){
 
@@ -35,6 +39,7 @@ export default function Login(){
             navigate("/hoje")
             setIsLoading(false);
             setImage(response.data.image)
+            setToken(response.data.token)
             console.log(response)
         })
 
