@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import ContextImage from './../Context/ContextImage';
+import ContextToken from './../Context/ContextToken';
 import { useContext } from 'react';
 
 export default function Header(){
 
-    const {image} = useContext(ContextImage);
+    const {image} = useContext(ContextToken);
 
     return(
         <Top>

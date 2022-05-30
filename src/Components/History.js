@@ -6,18 +6,6 @@ export default function (){
         <div>
             <Header />
             <h1>Historico</h1>
-            <h1>Historico</h1>
-            <h1>Historico</h1>
-            <h1>Historico</h1>
-            <h1>Historico</h1>
-            <h1>Historico</h1>
-            <h1>Historico</h1>
-            <h1>Historico</h1>
-            <h1>Historico</h1>
-            <h1>Historico</h1>
-            <h1>Historico</h1>
-            <h1>Historico</h1>
-            <h1>Historico 1</h1>
             <Menu />
         </div>
 

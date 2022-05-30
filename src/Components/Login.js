@@ -4,7 +4,6 @@ import axios from "axios";
 import { ThreeDots } from "react-loader-spinner";
 import Group8 from "../Assets/imagens/Group8.png";
 import styled from "styled-components";
-import ContextImage from './../Context/ContextImage';
 import ContextToken from './../Context/ContextToken';
 import { useContext } from 'react';
 
@@ -12,8 +11,7 @@ import { useContext } from 'react';
 
 export default function Login(){
 
-    const {setImage} = useContext(ContextImage);
-    const {setToken} = useContext(ContextToken);
+    const {setToken, setImage} = useContext(ContextToken);
 
     const [email, setEmail] = useState("biabee-@hotmail.com");
     const [senha, setSenha] = useState("123");
@@ -36,11 +34,12 @@ export default function Login(){
         const promise = axios.post('https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/auth/login', body)
 
         promise.then(response => {
-            navigate("/hoje")
+            console.log(response)
             setIsLoading(false);
             setImage(response.data.image)
             setToken(response.data.token)
-            console.log(response)
+            navigate("/hoje")
+            
         })
 
         promise.catch(error => {

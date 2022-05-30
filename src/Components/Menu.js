@@ -2,9 +2,14 @@ import { Link } from "react-router-dom";
 import { CircularProgressbar , buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import styled from "styled-components";
+import { useContext } from "react";
+import ContextToken from "../Context/ContextToken";
 
 
 export default function (){
+
+    const {percentage} = useContext(ContextToken);
+
     return (
         <Content>
             <Link to="/habitos"><p>Hábitos</p></Link>
@@ -15,7 +20,7 @@ export default function (){
                     trailColor: "transparent"
                 })}
         
-                value={50} text={"Hoje"} />
+                value={percentage} text={"Hoje"} />
             </Link>
             <Link to="/historico"><p>Histórico</p></Link>
         </Content>

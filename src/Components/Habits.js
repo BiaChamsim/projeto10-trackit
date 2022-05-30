@@ -5,7 +5,6 @@ import styled from "styled-components";
 import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import ContextToken from './../Context/ContextToken';
-import ContextUserHabits from './../Context/ContextUserHabits';
 import { is } from '@babel/types';
 
 
@@ -14,8 +13,7 @@ export default function Habits(){
     const [habit, setHabit] = useState("");
     const [day, setDay] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    const {token} = useContext(ContextToken);
-    const {userHabits, setUserHabits} = useContext(ContextUserHabits)
+    const {token, userHabits, setUserHabits} = useContext(ContextToken);
     
     useEffect(getHabits, []); 
 
