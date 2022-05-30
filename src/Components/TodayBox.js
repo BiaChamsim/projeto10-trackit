@@ -57,7 +57,7 @@ const TodayHabitBox = styled.div`
     height: 92px;
     color:#666666;
     background-color: #FFFFFF;
-    margin-top: 50px;
+    margin-top: 30px;
     padding-left: 14px;
     display: flex;
     justify-content: space-between;

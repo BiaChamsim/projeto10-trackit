@@ -47,7 +47,7 @@ export default function HabitBox(props){
                 <h1>{props.habits.name}</h1>
                 <div>{weekdays.map(day => renderDay(day))}</div>
             </HabitAndDay>
-            <BsTrash onClick={deleteHabit}/>
+            <BsTrash style={{fontSize:"20px" , marginTop:"10px" , marginRight:"10px"}} onClick={deleteHabit}/>
         </Box>
     )
 }
@@ -75,6 +75,7 @@ const HabitAndDay = styled.div`
 
 h1{
     font-size: 20px;
+    font-weight: 400;
     margin-left: 16px;
 }
 

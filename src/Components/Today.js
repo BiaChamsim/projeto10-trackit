@@ -45,7 +45,7 @@ export default function Today(props){
             <CurrentDay>
                 {dayjs().locale('pt-br').format('dddd, DD/MM')}
             </CurrentDay>
-            <h1>{percentage}</h1>
+            <h1 style={{fontSize: "18px" , fontWeight:"400" , color: "#8FC549"}}>{percentage}% dos hábitos concluídos</h1>
             <TodayBox getTodaysHabits={getTodaysHabits} /> 
             <Menu />
         </div>

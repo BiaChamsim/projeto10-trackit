@@ -180,14 +180,15 @@ const Button = styled.button`
     justify-content: center;
     align-items: center;
     border-radius: 4px;
-    color: #FFFFFF;     
+    color: #FFFFFF; 
+    border: none;
 
 `
 
 const Input = styled.input`
     width: 302px;
     height: 42px;
-    color: #D4D4D4;
+    color: black;
     margin-bottom: 8px;
 
 `
